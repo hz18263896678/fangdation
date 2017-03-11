@@ -1,15 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import Home from '@/components/Home'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+// 使用vue-Roter
 Vue.use(Router)
+
+// 使用vue-swiper
+Vue.use(VueAwesomeSwiper);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'Home',
+      component: Home
     }
   ]
 })
