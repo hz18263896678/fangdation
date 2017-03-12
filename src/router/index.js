@@ -4,6 +4,9 @@ import Index from '@/components/Index'
 import Home from '@/components/Home'
 import About from '@/components/About'
 import Details from '@/components/Details'
+import Commonweal from '@/components/Commonweal'
+import Information from '@/components/Information'
+import Notice from '@/components/Notice'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 // 使用vue-Roter
@@ -31,6 +34,21 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About
+    },
+    {
+      path: '/commonweal',
+      name: 'Commonweal',
+      component: Commonweal
+    },
+    {
+      path: '/info',
+      name: 'Information',
+      component: Information
+    },
+    {
+      path: '/notice',
+      name: 'Notice',
+      component: Notice
     }
   ]
 })

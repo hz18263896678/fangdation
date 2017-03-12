@@ -9,6 +9,9 @@
             <ul>
                 <li><router-link to="/index">首页</router-link></li>
                 <li><router-link to="/about">关于我们</router-link></li>
+                <li><router-link to="/commonweal">公益项目</router-link></li>
+                <li><router-link to="/info">最新资讯</router-link></li>
+                <li><router-link to="/notice">公示公告</router-link></li>
             </ul>
         </div>
     </div>
@@ -19,7 +22,7 @@ export default {
   name: 'header',
   data () {
     return {
-      msg: ''
+     msg:'',
     }
   }
 }
