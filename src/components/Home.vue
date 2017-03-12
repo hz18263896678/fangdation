@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <HomeRight ></HomeRight>
+        <HomeRight  show="false"></HomeRight>
     </div>
 </template>
 
