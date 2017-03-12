@@ -1,46 +1,81 @@
 <template>
-    <div class="w main clearfix">
-        <div class="tips">
+    <div class="fr">
+        <div class="section" v-if="!show">
+            <h4 ><b>政策·解读</b> <a href="#"><span>更多</span></a></h4>
+            <figure>
+                <img src="../assets/adv_img.png" />
+                <figcaption>
+                    <h5><a href="#">营养包：一场爱的接力</a></h5>
+                    <div>
+                        在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，
+                    </div>
+                </figcaption>
+            </figure>
             <ul>
-                <li>中国青年志愿者阳光残行动专题</li>
-                <li>中国青年志愿者阳光残行动专题</li>
+                <li><a href="#">春蕾计划一对一</a></li>
+                <li><a href="#">重庆拟立法要求女子写信问候老人</a></li>
+                <li><a href="#">重庆拟立法要求女子写信问候老人</a></li>
+                <li><a href="#">重庆拟立法要求女子写信问候老人</a></li>
             </ul>
+            <div class="btn"><a href="#">我要捐赠</a> / <a href="#">我的捐赠</a></div>
         </div>
-        <div class="fl">
+        <p v-if="!!show"  class="details-btn">
+          <div class="btn"><a href="#">我要捐赠</a> / <a href="#">我的捐赠</a></div>
+        </p>
 
-            <Carrousel></Carrousel>
+        <div class="section">
+            <h4><b>公益项目</b> <a href="#"><span>更多</span></a></h4>
+            <figure>
+                <img src="../assets/adv_img.png" />
+                <figcaption>
+                    <h5><a href="#">营养包：一场爱的接力</a></h5>
+                    <div>
+                        在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../assets/adv_img.png" />
+                <figcaption>
+                    <h5><a href="#">营养包：一场爱的接力</a></h5>
+                    <div>
+                        在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../assets/adv_img.png" />
+                <figcaption>
+                    <h5><a href="#">营养包：一场爱的接力</a></h5>
+                    <div>
+                        在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，在全国卫生与健康大会上，
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
 
-            <HomeSection :list="list1" type="1" name="最新资讯"></HomeSection>
-
-            <div class="section">
-                <h4><b>视频</b> <a href="#"><span>更多</span></a></h4>
+        <div class="section about">
+            <h4><b>关注我们</b></h4>
+            <div>
+                <dl>
+                    <dt><img src="../assets/erweima.gif" /></dt>
+                    <dd>
+                        英硕基金微信公众号
+                    </dd>
+                    <dd>
+                        yingshuo12345
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../assets/weibo.gif" /></dt>
+                    <dd>
+                        北京英硕公益基金微博
+                    </dd>
+                    <dd><a href="#">+ 加关注</a></dd>
+                </dl>
             </div>
 
-            <HomeSection :list="list2" type="2" name="公示"></HomeSection>
-
-            <HomeSection :list="list2" type="3" name="通知"></HomeSection>
-
-            <div class="link">
-                <div class="tab-title">
-                    <ul>
-                        <li class="active">公益合作伙伴</li>
-                        <li>公益传播伙伴</li>
-                        <li>公益项目伙伴</li>
-                    </ul>
-                </div>
-                <div class="tab-content">
-                    <ul>
-                        <li><a href="#">奥神传媒</a></li>
-                        <li><a href="#">中国</a></li>
-                        <li><a href="#">城市画报</a></li>
-                        <li><a href="#">风行网</a></li>
-                        <li><a href="#">广播</a></li>
-                        <li><a href="#">dji</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
-        <HomeRight ></HomeRight>
     </div>
 </template>
 
@@ -48,33 +83,17 @@
 
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import Carrousel from './Carrousel'
-import HomeRight from './HomeRight'
-import HomeSection from './HomeSection'
 export default {
-  name: 'home',
+  name: 'home-right',
+  props:[
+    'show'
+  ],
   data () {
     return {
       msg: '',
-      list1:[
-        {id:'1',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'2',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'3',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'4',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'5',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'6',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'7',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'}
-      ],
-      list2:[
-        {id:'1',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'2',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'3',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'4',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'5',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'},
-        {id:'6',name:'重庆拟立法要求女子写信问候老人',time:'2017-03-12'}
-      ]
     }
   },
-  components:{swiper, swiperSlide, Carrousel,HomeRight,HomeSection}
+  components:{swiper, swiperSlide, Carrousel}
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -222,17 +241,19 @@ export default {
 .section ul li a:hover{
     color: #ff6600;
 }
+.btn{
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  background: #ff6600;
+  color: #fff;
+  text-align: center;
+}
 .section .btn{
     position: absolute;
     bottom: 0px;
-    height: 40px;
-    line-height: 40px;
-    width: 100%;
-    background: #ff6600;
-    color: #fff;
-    text-align: center;
 }
-.section .btn a{
+.btn a{
     color: #fff;
     letter-spacing: 1px;
 }
