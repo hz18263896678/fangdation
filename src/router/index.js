@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Index from '@/components/Index'
 import Home from '@/components/Home'
 import About from '@/components/About'
+import Details from '@/components/Details'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 // 使用vue-Roter
@@ -18,8 +20,12 @@ export default new Router({
     },
     {
       path: '/index',
-      name: 'Home',
-      component: Home
+      name: 'Index',
+      component: Index,
+      children:[
+        { path: '', component: Home},
+        { path: 'details', component: Details}
+      ]
     },
     {
       path: '/about',
