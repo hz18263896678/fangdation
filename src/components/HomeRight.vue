@@ -1,6 +1,7 @@
 <template>
     <div class="fr">
-        <div class="section" v-if="!show">
+        <div class="section" v-if="'false'==show">
+
             <h4 ><b>政策·解读</b> <a href="#"><span>更多</span></a></h4>
             <figure>
                 <img src="../assets/adv_img.png" />
@@ -19,8 +20,9 @@
             </ul>
             <div class="btn"><a href="#">我要捐赠</a> / <a href="#">我的捐赠</a></div>
         </div>
-        <p v-if="!!show"  class="details-btn">
-          <div class="btn"><a href="#">我要捐赠</a> / <a href="#">我的捐赠</a></div>
+
+        <p v-if="'false'!=show"  class="details-btn">
+          <div class="btn" v-if="'false'!=show"><a href="#">我要捐赠</a> / <a href="#">我的捐赠</a></div>
         </p>
 
         <div class="section">
