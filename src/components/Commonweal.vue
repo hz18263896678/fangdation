@@ -101,13 +101,15 @@ export default {
 }
 .commonweal .story figure{
   display:inline-block;
-  width:236px !important;
+  width:234px !important;
   margin-bottom:30px;
   border:1px solid #f7f7f7;
 }
 .commonweal .story figure img{
   display:inline-block;
   width:100%;
+  height:160px;
+
 }
 .commonweal .story figure:nth-child(3n-1){
   margin: 0 30px;
