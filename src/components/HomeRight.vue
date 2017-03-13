@@ -178,6 +178,7 @@ export default {
 .section h4 span{
     float: right;
     font-size: 12px;
+    font-weight: normal
 }
 .section h4 a:hover{
     color: #000;

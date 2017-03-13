@@ -87,13 +87,11 @@ a {
 }
 
 a:hover {
-    color: #C81623;
+    color: #ff6600;
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
-    font-weight: normal;
-    font-size: 100%;
 }
 
 s, i, em {

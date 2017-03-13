@@ -14,6 +14,9 @@
 
             <div class="section">
                 <h4><b>视频</b> <a href="#"><span>更多</span></a></h4>
+                <div style="margin-top:10px;">
+                  <iframe frameborder="0" width="370" height="230" src="https://v.qq.com/iframe/player.html?vid=q01542hxhq8&tiny=0&auto=0" allowfullscreen></iframe>
+                </div>
             </div>
 
             <HomeSection :list="list2" type="2" name="公示"></HomeSection>
